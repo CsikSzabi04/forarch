@@ -1,0 +1,13 @@
+# Exclude everything by default
+*
+
+# Allow the website folder
+!forarch/website/**
+!forarch/website/*
+
+# Exclude node_modules and dist within website
+forarch/website/node_modules
+forarch/website/dist
+
+# Exclude local envs
+.env*.local
