@@ -1,4 +1,5 @@
 {
+  "installCommand": "cd forarch/website && pnpm install",
   "buildCommand": "cd forarch/website && pnpm run build",
   "outputDirectory": "forarch/website/dist",
   "framework": "vite"
