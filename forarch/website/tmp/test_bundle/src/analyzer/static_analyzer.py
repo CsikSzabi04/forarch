@@ -1,0 +1,1 @@
+def scan_file(f): return []

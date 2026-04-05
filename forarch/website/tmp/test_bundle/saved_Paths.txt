@@ -1,0 +1,1 @@
+# Enter directory paths to scan, one per line

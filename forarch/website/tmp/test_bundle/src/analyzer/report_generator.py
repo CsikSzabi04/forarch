@@ -1,0 +1,1 @@
+def generate_report(f, s): return "report.txt"

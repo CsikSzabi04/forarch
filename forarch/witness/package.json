@@ -1,0 +1,73 @@
+{
+  "name": "forarch-witness",
+  "displayName": "Forecast Archaeology - Witness",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "forarch.markFix",
+        "title": "ForArch: Mark this debug session as a fix"
+      },
+      {
+        "command": "forarch.showSuggestions",
+        "title": "ForArch: Show similar past bugs"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "forarch-sidebar",
+          "title": "ForArch",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "forarch-sidebar": [
+        {
+          "id": "forarch.suggestions",
+          "name": "Similar Bugs"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "ForArch",
+      "properties": {
+        "forarch.testCommand": {
+          "type": "string",
+          "default": "npm test",
+          "description": "Command to run tests"
+        },
+        "forarch.teamServer": {
+          "type": "string",
+          "default": "",
+          "description": "Optional team sync URL"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.5.2",
+    "@types/uuid": "^10.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.2.2",
+    "vsce": "^2.15.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "uuid": "^9.0.0"
+  }
+}
