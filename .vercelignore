@@ -1,13 +1,14 @@
-# Exclude everything by default
-*
+# Non-web components
+forarch/decay/
+forarch/witness/
+.venv/
 
-# Allow the website folder
-!forarch/website/**
-!forarch/website/*
-
-# Exclude node_modules and dist within website
-forarch/website/node_modules
-forarch/website/dist
-
-# Exclude local envs
+# Build artifacts and local deps
+node_modules/
+dist/
 .env*.local
+.git/
+.vscode/
+
+# Ignore root-level vercel if we are building from website
+# (But we keep it for now as a fallback)
