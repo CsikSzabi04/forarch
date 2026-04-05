@@ -9,82 +9,82 @@
 
 ---
 
-## 🧐 Mi az a ForArch?
+## 🧐 What is ForArch?
 
-A **ForArch (Forecast Archaeology)** egy modern, teljeskörű projekt-auditáló és karbantartó ökoszisztéma. Nem csak egy statikus elemző, hanem egy **"Digitális Régész"**, amely képes feltárni a projektjeidben rejtőző technikai adósságokat, elévülő könyvtárakat és veszélyes kódmintákat, mielőtt azok összeomlást okoznának.
+**ForArch (Forecast Archaeology)** is a modern, comprehensive project auditing and maintenance ecosystem. It's not just a static analyzer, but a **"Digital Archaeologist"** capable of uncovering hidden technical debt, decaying libraries, and dangerous code patterns in your projects before they cause a collapse.
 
-A rendszer két fő pilléren nyugszik: egy **ultragyors Python CLI motoron** és egy **felhőalapú Remote Hub Dashboardon**.
+The system is built on two main pillars: an **ultra-fast Python CLI engine** and a **cloud-based Remote Hub Dashboard**.
 
 ---
 
-## ✨ Főbb Funkciók
+## ✨ Key Features
 
 ### 🔍 1. Deep Scan Engine
-*   **Összetett Vizsgálat**: NPM, PyPI és Maven manifest fájlok párhuzamos elemzése.
-*   **Decay Forecasting**: Megjósolja, melyik könyvtár fog elavulni a letöltési statisztikák és a GitHub aktivitás alapján.
-*   **Static Analysis**: Mély kódvizsgálat a "legacy" minták és elavult API hívások után.
+*   **Comprehensive Analysis**: Parallel analysis of NPM, PyPI, and Maven manifest files.
+*   **Decay Forecasting**: Predicts which libraries will become legacy based on download statistics and GitHub activity.
+*   **Static Analysis**: Deep code inspection for "legacy" patterns and deprecated API calls.
 
-### 🛡️ 2. Guardian Modul
-*   **Project Supervision**: Figyeli a megadott útvonalaidat és azonnal jelez, ha egy projekt "rohadni" kezd.
-*   **Auto-Remediation**: Képes automatizált fix-scriptek generálására és a függőségek biztonságos frissítésére.
-*   **Archiválás**: Automatikusan felismeri és tömöríti (ZIP) az inaktív, régi munkáidat.
+### 🛡️ 2. Guardian Module
+*   **Project Supervision**: Monitors your specified paths and alerts you immediately if a project starts to "rot".
+*   **Auto-Remediation**: Capable of generating automated fix scripts and securely updating dependencies.
+*   **Archiving**: Automatically identifies and compresses (ZIP) inactive, old projects.
 
 ### 🌐 3. Remote Hub Dashboard
-*   **Cloud Command & Control**: Irányítsd a gépvázon futó CLI-t bárhonnan a webes felületen keresztül.
-*   **Real-time Streaming**: A terminál kimenete (színekkel együtt!) élőben streamelhető a webre.
-*   **Smart Session**: Folyamatos szinkronizáció a Firebase alapú távoli kapcsolattal.
+*   **Cloud Command & Control**: Control the CLI running on your machine from anywhere through the web interface.
+*   **Real-time Streaming**: Terminal output (with colors preserved!) is streamed live to the web.
+*   **Smart Session**: Continuous synchronization via Firebase-based remote connection.
 
 ---
 
-## 🚀 Telepítés és Indítás
+## 🚀 Installation & Setup
 
-### Követelmények
+### Requirements
 - Python 3.8+
-- Node.js (a webes felülethez)
-- Firebase Account (a Remote Hub funkcióhoz)
+- Node.js (for the web interface)
+- Firebase Account (for Remote Hub functionality)
 
-### Lépések
-1.  **Repo klónozása**:
+### Steps
+1.  **Clone the Repo**:
     ```bash
     git clone https://github.com/CsikSzabi04/forarch.git
     cd forarch
     ```
 
-2.  **CLI beállítása**:
+2.  **CLI Setup**:
     ```bash
     pip install -r requirements.txt
     python forarch.py check-env
     ```
 
-3.  **Web Dashboard indítása**:
+3.  **Launch Web Dashboard**:
     ```bash
-    cd website
-    npm install
-    npm run dev
+    cd forarch/website
+    pnpm install
+    pnpm run dev
     ```
 
 ---
 
-## 🎮 Használat
+## 🎮 Usage
 
-### Helyi CLI parancsok
-- `python forarch.py scan --dir .` -> Teljes szkennelés a jelenlegi mappában.
-- `python forarch.py guardian scan` -> Interaktív projekt-felügyeleti menü indítása.
-- `python forarch.py watch` -> Valós idejű "Radar" mód indítása.
+### Local CLI Commands
+- `python forarch.py scan --dir .` -> Full scan in the current directory.
+- `python forarch.py guardian scan` -> Launch interactive project supervision menu.
+- `python forarch.py watch` -> Start real-time "Radar" mode.
 
-### Távirányítás (Remote Hub)
-A webről küldhető speciális parancsok:
-| Parancs | Leírás |
+### Remote Control (Remote Hub)
+Special commands available from the web:
+| Command | Description |
 | :--- | :--- |
-| `/stop` | Azonnali leállítás. |
-| `/rewrite` | Újraindítás és visszatérés a főmenübe (Session megtartásával). |
-| `/save` | Aktuális logok mentése verziózva a `Scan Results` mappába. |
-| `/clear` | Terminál képernyő ürítése. |
-| `/manual` | Megnyitja a távoli útmutatót a gépeden. |
+| `/stop` | Immediate shutdown. |
+| `/rewrite` | Restart and return to main menu (preserving the session). |
+| `/save` | Save current logs with versioning to the `Scan Results` folder. |
+| `/clear` | Clear terminal screen. |
+| `/manual` | Open the remote guide on your machine. |
 
 ---
 
-## 🛠️ Architektúra
+## 🛠️ Architecture
 
 ```mermaid
 graph TD
@@ -99,17 +99,17 @@ graph TD
 
 ---
 
-## 💎 Design és Vizuális Élmény
+## 💎 Design and Visual Experience
 
-A ForArch nem csak funkcionális, hanem látványos is. A **Rich** library segítségével a terminál kimenet modern, színes és könnyen olvasható (ikonokkal, táblázatokkal és ASCII bannerrel).
+ForArch is not only functional but also visually stunning. Using the **Rich** library, terminal output is modern, colorful, and easy to read (featuring icons, tables, and an ASCII banner).
 
 ---
 
-## 📜 Licenc
+## 📜 License
 
-Ez a projekt az **MIT Licenc** alatt érhető el.
+This project is available under the **MIT License**.
 
 ---
 <p align="center">
-  <b>ForArch - Mert a kódod is megérdemli a régészeti gondoskodást. ⚡</b>
+  <b>ForArch - Because your code deserves archaeological care too. ⚡</b>
 </p>
